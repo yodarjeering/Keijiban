@@ -2,10 +2,6 @@
 
 @section('title', '12ちゃんねる')
 
-@section('menubar')
-    インデックスページ
-@endsection
-
 @section('content')
     <p>スレッドの作成</p>
     <form action="/keijiban/thre" method="post">
