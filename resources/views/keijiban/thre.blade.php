@@ -7,7 +7,7 @@
     @if(isset($items))
         @foreach($items as $item)
             <li>
-                <div>{{$item->date}}</div>
+                <div>{{$item->getData()}}</div>
                 <a href="/keijiban/thre?thread_id={{$item->id}}">{{$item->name}}</a>
             </li>
         @endforeach
