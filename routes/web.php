@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/keijiban' , 'ThreadController@index');
+Route::post('/keijban','ThreadController@create');
+Route::get('/keijiban/thre','MessageController@index');
+Route::post('/keijiban/thre','MessageController@create');
+
