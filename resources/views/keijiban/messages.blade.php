@@ -6,15 +6,15 @@
 @section('content')
     <table>
         <tr><th>$thread_name</th></tr>
-        @foreach($thread_items as $thread_item)
+        @foreach($items as $item)
             <tr>
-                <td>{{$thread_item->getData()}}</td>
+                <td>{{$item->getData()}}</td>
             </tr>
             @endforeach
     </table>
     <form action="keijiban/messages" method="post">
-    <input type="text" name "msg">
-    <input type="submit" value="投稿する">
+        <input type="text" name =  "msg">
+        <input type="submit" value="投稿する">
     </form>
     <tr><th>form</th></tr>
     @endsection
