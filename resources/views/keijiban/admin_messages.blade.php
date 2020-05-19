@@ -12,11 +12,11 @@
         <input type="text" name="input" value ="{{$input}}">
         <input type="submit" value="find">
     </form>
-    @if(isset($item))
+    @if(isset($items))
         <table>
             <tr><th>data</th><th>button</th></tr>
             @php
-                $nuber = 1;
+                $number = 1;
             @endphp
             @foreach($items as $item)
                 <tr>
