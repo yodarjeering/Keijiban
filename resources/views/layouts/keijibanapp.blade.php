@@ -77,6 +77,6 @@
     <div class="footer">
         @yield('footer')
     </div>
-//ンゴ
+//ンゴ午後
 </body>
 </html>
