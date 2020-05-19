@@ -77,6 +77,7 @@
     <div class="footer">
         @yield('footer')
     </div>
-//ンゴ
 </body>
 </html>
+
+//takeruBranch
