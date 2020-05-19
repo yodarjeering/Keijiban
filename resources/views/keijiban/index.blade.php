@@ -8,6 +8,7 @@
 
 @section('content')
     <p>スレッドの作成</p>
+    @csrf
     <form action="keijiban/messages" method="post">
         <label>スレッド名：</label>
         <input type="text" name="thread" value="{{old('thread')}}" size="100px">
@@ -15,7 +16,7 @@
     </form>
 
 
-
+@csrf
     <form action="keijiban" method="post">
         <label>スレッド名：</label>
         <input type="text" name="thread" value="{{old('thread')}}" size="100px">
@@ -27,6 +28,7 @@
             <tr><th>data</th><th>button</th></tr>
             @foreach($items as $item)
                 <tr>
+                    @csrf
                     <form action="/keijiban/admin/messages" method="post">
                         <td>$number++ . ': '{{$item->content}} . {{$item->time}}</td>
                         <td><input type="submit" name="message{{$item->id}} "value="delete"></td>
