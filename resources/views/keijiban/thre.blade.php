@@ -8,8 +8,7 @@
         <ul>
             @foreach($items as $item)
                 <li>
-                    <div>{{$item->date}}</div>
-                    <a href="/keijiban/thre?thread_id={{$item->id}}">{{$item->name}}</a>
+                    <div>{{$item->getData()}}</div>
                 </li>
             @endforeach
         </ul>

@@ -8,8 +8,9 @@ use App\Message;
 
 class MessageController extends Controller
 {
-    public function index($thread_id)
+    public function index(Request $request)
     {
+        $thread_id = $request->thread_id;
         $items = Message::where('thread_id', $thread_id)->get();
         return view('keijiban.thre', ['items' => $items]);
     }
