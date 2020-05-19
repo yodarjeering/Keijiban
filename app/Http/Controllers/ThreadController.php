@@ -35,4 +35,21 @@ class ThreadController extends Controller
         return redirect('/keijiban/thre');
     }
 
+    public function post(Request $request)
+    {
+        if ($request->post_type == 'create') {
+            $thread = new Thread;
+            $form = $request->all();
+            unset($form['_token']);
+            $thread->fill($form)->save();
+            $thread->time = date('Y年m月d日 H時i分s秒');
+            $thread->save();
+            return redirect('/keijiban/thre');
+        } else
+            {
+            $items = Thread::where('name', 'like', '%' . $request->input . '%')->get();
+            return view('keijiban.index', ['items' => $items]);
+            }
+    }
+
 }
