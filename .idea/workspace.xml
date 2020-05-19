@@ -19,10 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="3ec5800e-4f0e-4da8-b140-5a0cf5e3142e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/keijibanapp.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/keijibanapp.blade.php" afterDir="false" />
     </list>
+=======
+    <list default="true" id="3ec5800e-4f0e-4da8-b140-5a0cf5e3142e" name="Default Changelist" comment="" />
+>>>>>>> 504976e2b222738c514aaa98123361edf55ce39b
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,6 +181,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="805" y="520" key="NewPhpFileDialog" timestamp="1589850295226">
