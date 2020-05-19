@@ -19,7 +19,7 @@
 
     <form action="/keijiban" method="post">
         <label>スレッド名：</label>
-        <input type="text" name="input" value="{{$input}}" size="100px">
+        <input type="text" name="input" value="{{$input ?? ''}}" size="100px">
         <input type="submit" value="検索">
     </form>
 
