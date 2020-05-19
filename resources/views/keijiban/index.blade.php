@@ -10,15 +10,16 @@
     <p>スレッドの作成</p>
     <form action="/keijiban/thre" method="post">
         <label>スレッド名：</label>
+        @csrf
         <input type="text" name="thread" size="100px">
         <input type="submit" value="作成">
     </form>
 
     <br>
     <br>
-
     <form action="/keijiban" method="post">
         <label>スレッド名：</label>
+        @csrf
         <input type="text" name="input" value="{{$input ?? ''}}" size="100px">
         <input type="submit" value="検索">
     </form>
