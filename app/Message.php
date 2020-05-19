@@ -8,6 +8,6 @@ class Message extends Model
 {
     public function getData()
     {
-        return $this->content . '\n' . $this->time ;
+        return $this->content  .' '. $this->time ;
     }
 }
