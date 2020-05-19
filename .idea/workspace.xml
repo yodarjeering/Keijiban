@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="3ec5800e-4f0e-4da8-b140-5a0cf5e3142e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/keijibanapp.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/keijibanapp.blade.php" afterDir="false" />
@@ -27,6 +28,12 @@
 =======
     <list default="true" id="3ec5800e-4f0e-4da8-b140-5a0cf5e3142e" name="Default Changelist" comment="" />
 >>>>>>> 504976e2b222738c514aaa98123361edf55ce39b
+=======
+    <list default="true" id="e8c27e84-65a9-4975-a042-f0d48aeb0bc6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+>>>>>>> 5139eac75f7f121c44a43a97ba677382c31ca86c
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
