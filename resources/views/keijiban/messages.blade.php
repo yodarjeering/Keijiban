@@ -1,4 +1,0 @@
-<?php
-    //んごご
-    asss
-    ajfjfhfh
