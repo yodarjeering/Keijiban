@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/keijiban' , 'ThreadController@index');
-Route::post('/keijban','ThreadController@post');
+Route::post('/keijiban', 'ThreadController@post');
 Route::get('/keijiban/thre','MessageController@index');
 Route::post('/keijiban/thre','MessageController@create');
 

@@ -4,15 +4,17 @@
 
 
 @section('content')
-    <table>
-        <tr><th>$thread_name</th></tr>
+    @if(isset($items))
         @foreach($items as $item)
-            <tr>
-                <td>{{$item->getData()}}</td>
-            </tr>
+            <li>
+                <div>{{$item->date}}</div>
+                <a href="/keijiban/thre?thread_id={{$item->id}}">{{$item->name}}</a>
+            </li>
         @endforeach
-    </table>
+    @endif
+
     <form action="keijiban/messages" method="post">
+        @csrf
         <input type="text" name = "msg">
         <input type="submit" value="投稿する">
     </form>
