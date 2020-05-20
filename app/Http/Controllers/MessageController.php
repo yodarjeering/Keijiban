@@ -28,11 +28,18 @@ class MessageController extends Controller
     public function create(Request $request)
     {
         $message = new Message;
-        $form = $request->all();
-        unset($form['_token']);
-        $message->fill($form)->save();
+//        $form = $request->all();
+        $message->content = $request->msg;
+        $message->thread_id = $request->thread_id;
+
+//        unset($form['_token']);
+//        $message->fill($form)->save();
         $message->time = date('Y年m月d日 H時i分s秒');
         $message->save();
-        return redirect('/keijiban/thre');
+        $thread_id = $request->thread_id;
+//        $thread= Thread::where('id', $thread_id)->first();
+
+//        return view('keijiban.thre',['thread_id'=>$thread_id]);
+        return redirect(route('thre',['thread_id'=>$thread_id]));
     }
 }
