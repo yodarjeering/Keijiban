@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <form action="/admin/delete" method="post">
+    <form action="/keijiban/admin_thre_delete" method="post">
         @csrf
         削除しますか。<br><br>
         <input type="hidden" name="id" value="{{$items->id}}">

@@ -21,8 +21,8 @@ class AdminThreadController extends Controller
 
     public function delete(Request $request)
     {
-        $item = Thread::find($request->id);
-        return view('keijiban/admin_thre_delete', ['item' => $item]);
+        $items = Thread::find($request->id);
+        return view('keijiban/admin_thre_delete', ['items' => $items]);
     }
 
     public function remove(Request $request)
