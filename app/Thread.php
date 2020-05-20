@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Thread extends Model
 {
-    protected  $guarded = array('id');
+    public $timestamps = false;
+
     public function getData()
     {
         return $this->name . '\n' . $this->time;
