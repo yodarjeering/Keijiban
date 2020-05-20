@@ -7,13 +7,13 @@
 
         <h2>{{$thread->name}}</h2>
 
-        <ul>
+        <ol>
             @foreach($items as $item)
                 <li>
                     <div>{{$item->getData()}}</div>
                 </li>
             @endforeach
-        </ul>
+        </ol>
     @endif
 
     <form action="/keijiban/thre" method="post">
