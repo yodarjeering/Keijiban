@@ -19,6 +19,7 @@
     <form action="/keijiban/thre" method="post">
         @csrf
         <input type="text" name="msg">
+        <input type="hidden" name="thread_id" value='{{$thread->id}}'>
         <input type="submit" value="投稿する">
     </form>
     <br>
