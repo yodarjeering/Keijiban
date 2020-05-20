@@ -4,7 +4,7 @@
 
 @section('content')
     <p>スレッドの作成</p>
-    <form action="/keijiban/thre" method="post">
+    <form action="/keijiban" method="post">
         <label>スレッド名：</label>
         @csrf
         <input type="hidden" name="post_type" value="create">

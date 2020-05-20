@@ -15,7 +15,9 @@
         <br>
         <input type="submit" value="はい">
     </form>
-    <a href="/keijiban/admin_index">戻る</a>
+    <br>
+    <button type="戻る" onclick="history.back()">戻る</button>
+    <br>
 @endsection
 
 

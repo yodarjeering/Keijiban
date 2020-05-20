@@ -5,6 +5,7 @@
 @section('content')
     <form action="/keijiban/admin_thre" method="post">
         @csrf
+        <input type="hidden" name="thread_id" value="{{$thread->id}}">
         <input type="text" name="input" value ="{{$input ?? ''}}">
         <input type="submit" value="検索">
     </form>
@@ -17,13 +18,15 @@
         <table>
             @foreach($items as $item)
                 <tr>
-                    <td>{{$number++}}: {{$item->getData()}}</td>
+                    <th>{{$number++}}: {{$item->getData()}}</th>
                     <td><a href="/keijiban/admin_message_delete?id={{$item->id}}">削除</a></td>
                 </tr>
             @endforeach
         </table>
     @endif
-    <a href="/keijiban/admin_index">戻る</a>
+    <br>
+    <button type="戻る" onclick="history.back()">戻る</button>
+    <br>
 @endsection
 
 @section('footer')

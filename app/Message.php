@@ -11,4 +11,9 @@ class Message extends Model
     {
         return $this->content  .' '. $this->time ;
     }
+
+    public function scopeThread_idEqual($query, $str)
+    {
+        return $query->where('thread_id', $str);
+    }
 }
