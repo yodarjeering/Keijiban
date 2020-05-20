@@ -11,6 +11,7 @@
         <br>
         <input type="submit" value="はい">
     </form>
+    <button type="戻る" onclick="history.back()">戻る</button>
 @endsection
 
 
