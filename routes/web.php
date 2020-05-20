@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 Route::get('/keijiban' , 'ThreadController@index');
 Route::post('/keijiban', 'ThreadController@post');
-Route::get('/keijiban/thre','MessageController@index');
+Route::get('/keijiban/thre','MessageController@index')->name('thre');
 Route::post('/keijiban/thre','MessageController@create');
 Route::get('/keijiban/admin_index', 'AdminThreadController@index');
 Route::post('/keijiban/admin_index','AdminThreadControllerController@serach');
