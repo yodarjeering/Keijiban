@@ -15,6 +15,7 @@
         <br>
         <input type="submit" value="はい">
     </form>
+    <a href="/keijiban/admin_index">戻る</a>
 @endsection
 
 
