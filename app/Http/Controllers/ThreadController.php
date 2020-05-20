@@ -39,12 +39,15 @@ class ThreadController extends Controller
     {
         if ($request->post_type == 'create') {
             $thread = new Thread;
-            $form = $request->all();
-            unset($form['_token']);
-            $thread->fill($form)->save();
+//            $form = $request->all();
+//            unset($form['_token']);
+//            unset($form['post_type']);
+//            $thread->fill($form)->save();
+
+            $thread->name = $request->name;
             $thread->time = date('Y年m月d日 H時i分s秒');
             $thread->save();
-            return redirect('/keijiban/thre');
+            return redirect('/keijiban');
         } else
             {
             $items = Thread::where('name', 'like', '%' . $request->input . '%')->get();
