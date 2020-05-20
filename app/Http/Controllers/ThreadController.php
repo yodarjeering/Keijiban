@@ -44,7 +44,7 @@ class ThreadController extends Controller
 //            unset($form['post_type']);
 //            $thread->fill($form)->save();
 
-            $thread->name = $request->name;
+            $thread->name = $request->thread;
             $thread->time = date('Y年m月d日 H時i分s秒');
             $thread->save();
             return redirect('/keijiban');

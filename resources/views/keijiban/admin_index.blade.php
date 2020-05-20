@@ -16,15 +16,14 @@
     </form>
 
     @if(isset($items))
-        <ul>
+        <table>
             @foreach($items as $item)
-                <li>
-                    <div>{{$item->date}}</div>
-                    <a href="/keijiban/admin_thre?thread_id={{$item->id}}">{{$item->name}}</a>
-                    <a href="/keijiban/admin_thre_delete?id={{$item->id}}">　　　　　　　削除</a>
-                </li>
+                <tr>
+                    <th><a href="/keijiban/admin_thre?thread_id={{$item->id}}">{{$item->name}}</a></th>
+                    <td><a href="/keijiban/admin_thre_delete?id={{$item->id}}">削除</a></td>
+                </tr>
             @endforeach
-        </ul>
+        </table>
     @endif
 @endsection
 

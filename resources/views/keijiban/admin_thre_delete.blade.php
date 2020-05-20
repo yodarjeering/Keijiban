@@ -15,7 +15,8 @@
         <br>
         <input type="submit" value="はい">
     </form>
-    <a href="/keijiban/admin_index">戻る</a>
+    <br>
+    <button onclick="location.href='/keijiban/admin_index'">戻る</button>    <br>
 @endsection
 
 

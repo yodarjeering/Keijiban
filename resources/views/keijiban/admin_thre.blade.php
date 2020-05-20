@@ -3,13 +3,15 @@
 @section('title', '12ちゃんねる')
 
 @section('content')
+
+    <h2>{{$thread->name}}</h2>
+
     <form action="/keijiban/admin_thre" method="post">
         @csrf
+        <input type="hidden" name="thread_id" value="{{$thread->id}}">
         <input type="text" name="input" value ="{{$input ?? ''}}">
         <input type="submit" value="検索">
     </form>
-
-    <h2>{{$thread->name}}</h2>
     @if(isset($items))
         @php
             $number = 1;
@@ -17,13 +19,16 @@
         <table>
             @foreach($items as $item)
                 <tr>
-                    <td>{{$number++}}: {{$item->getData()}}</td>
+                    <th>{{$number++}}: {{$item->getData()}}</th>
                     <td><a href="/keijiban/admin_message_delete?id={{$item->id}}">削除</a></td>
                 </tr>
             @endforeach
         </table>
     @endif
-    <a href="/keijiban/admin_index">戻る</a>
+
+    <br>
+    <button onclick="location.href='/keijiban/admin_index'">戻る</button>
+    <br>
 @endsection
 
 @section('footer')
