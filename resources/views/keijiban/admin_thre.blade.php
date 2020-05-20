@@ -3,14 +3,15 @@
 @section('title', '12ちゃんねる')
 
 @section('content')
+
+    <h2>{{$thread->name}}</h2>
+
     <form action="/keijiban/admin_thre" method="post">
         @csrf
         <input type="hidden" name="thread_id" value="{{$thread->id}}">
         <input type="text" name="input" value ="{{$input ?? ''}}">
         <input type="submit" value="検索">
     </form>
-
-    <h2>{{$thread->name}}</h2>
     @if(isset($items))
         @php
             $number = 1;
@@ -24,8 +25,9 @@
             @endforeach
         </table>
     @endif
+
     <br>
-    <button type="戻る" onclick="history.back()">戻る</button>
+    <button onclick="location.href='/keijiban/admin_index'">戻る</button>
     <br>
 @endsection
 
