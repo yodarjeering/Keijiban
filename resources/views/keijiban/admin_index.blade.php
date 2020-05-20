@@ -20,7 +20,7 @@
             @foreach($items as $item)
                 <li>
                     <div>{{$item->date}}</div>
-                    <a href="/keijiban/thre?thread_id={{$item->id}}">{{$item->name}}</a>
+                    <a href="/keijiban/admin_thre?thread_id={{$item->id}}">{{$item->name}}</a>
                     <a href="/keijiban/admin_thre_delete?id={{$item->id}}">　　　　　　　削除</a>
                 </li>
             @endforeach

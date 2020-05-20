@@ -18,10 +18,10 @@
 
     <form action="/keijiban/thre" method="post">
         @csrf
-{{--        <input type="hidden" name="thread_name" value="{{$thread_name}}">--}}
-{{--        <input type="text" name="text" value="{{$content ?? ''}}">--}}
-{{--        <input type="submit" value="投稿する">--}}
-        <a href="/keijiban/contribute">投稿する</a>
+        <input type="hidden" name="thread_id" value="{{$thread_id}}">
+        <input type="text" name="text" value="{{$text ?? ''}}">
+        <input type="submit" value="投稿する">
+        <a href="/keijiban/thre">投稿する</a>
     </form>
     <br>
     <a href="/keijiban">戻る</a>
