@@ -18,7 +18,7 @@
             @endphp
             @foreach($items as $item)
                 <tr>
-                    <a href="/keijiban/admin_thre_message_delete?message_id={{$item->id}}">
+                    <a href="/keijiban/admin_message_delete?message_id={{$item->id}}">
                         <td>$number++ . ': '{{$item->getData()}}</td></a>
                 </tr>
             @endforeach
