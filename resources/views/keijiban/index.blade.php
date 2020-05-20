@@ -4,11 +4,11 @@
 
 @section('content')
     <p>スレッドの作成</p>
-    <form action="/keijiban/thre" method="post">
+    <form action="/keijiban" method="post">
         <label>スレッド名：</label>
         @csrf
         <input type="hidden" name="post_type" value="create">
-        <input type="text" name="thread" size="100px">
+        <input type="text" name="name" value="{{old('name')}}" size="70px">
         <input type="submit" value="作成">
     </form>
 
@@ -18,7 +18,7 @@
         <label>スレッド名：</label>
         @csrf
         <input type="hidden" name="post_type" value="search">
-        <input type="text" name="input" value="{{$input ?? ''}}" size="100px">
+        <input type="text" name="input" value="{{$input ?? ''}}" size="70px">
         <input type="submit" value="検索">
     </form>
 
