@@ -27,6 +27,7 @@ class MessageController extends Controller
 
     public function create(Request $request)
     {
+        ini_set('date.timezone', 'Asia/Tokyo');
         $message = new Message;
 //        $form = $request->all();
         $message->content = $request->msg;
