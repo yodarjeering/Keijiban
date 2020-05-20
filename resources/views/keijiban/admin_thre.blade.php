@@ -6,7 +6,7 @@
     <form action="/keijiban/admin_thre" method="post">
         @csrf
         <input type="text" name="input" value ="{{$input ?? ''}}">
-        <input type="submit" value="find">
+        <input type="submit" value="検索">
     </form>
 
     <h2>{{$thread->name}}</h2>
@@ -15,10 +15,10 @@
             $number = 1;
         @endphp
         <table>
-            <tr><th>data</th></tr>
             @foreach($items as $item)
                 <tr>
-                        <td><a href="/keijiban/admin_message_delete?id={{$item->id}}">{{$number++}}: {{$item->getData()}}</a></td>
+                    <td>{{$number++}}: {{$item->getData()}}</td>
+                    <td><a href="/keijiban/admin_message_delete?id={{$item->id}}">削除</a></td>
                 </tr>
             @endforeach
         </table>
