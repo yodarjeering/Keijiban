@@ -14,12 +14,9 @@ class MessageController extends Controller
         $thread_id = $request->thread_id;
         $items = Message::where('thread_id', $thread_id)->get();
         $thread= Thread::where('id', $thread_id)->first();
-
-        $thread_name=$thread->name;
         return view('keijiban.thre', [
             'items' => $items,
-            'thread_name' => $thread_name,
-            'thread_id' => $thread_id,
+            'thread' => $thread,
         ]);
     }
 
@@ -32,15 +29,17 @@ class MessageController extends Controller
     {
         $message = new Message;
 //        $form = $request->all();
+        $message->content = $request->msg;
+        $message->thread_id = $request->thread_id;
+
 //        unset($form['_token']);
 //        $message->fill($form)->save();
-        $message->content= $request->text;
         $message->time = date('Y年m月d日 H時i分s秒');
         $message->save();
+        $thread_id = $request->thread_id;
+//        $thread= Thread::where('id', $thread_id)->first();
 
-        return redirect('/keijiban/thre')
-            ->withInput(['thread_id'=>$request->thread_id]);
-
-
+//        return view('keijiban.thre',['thread_id'=>$thread_id]);
+        return redirect(route('thre',['thread_id'=>$thread_id]));
     }
 }

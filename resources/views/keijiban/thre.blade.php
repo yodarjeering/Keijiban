@@ -5,7 +5,7 @@
 @section('content')
     @if(isset($items))
 
-        <h2>{{$thread_name}}</h2>
+        <h2>{{$thread->name}}</h2>
 
         <ul>
             @foreach($items as $item)
@@ -18,10 +18,9 @@
 
     <form action="/keijiban/thre" method="post">
         @csrf
-        <input type="hidden" name="thread_id" value="{{$thread_id}}">
-        <input type="text" name="text" value="{{$text ?? ''}}">
+        <input type="text" name="msg">
+        <input type="hidden" name="thread_id" value='{{$thread->id}}'>
         <input type="submit" value="投稿する">
-        <a href="/keijiban/thre">投稿する</a>
     </form>
     <br>
     <a href="/keijiban">戻る</a>
