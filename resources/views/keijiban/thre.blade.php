@@ -1,10 +1,12 @@
 @extends('layouts.keijibanapp')
 
-@section('title','１２ちゃんねる')
-
+@section('title','12ちゃんねる')
 
 @section('content')
     @if(isset($items))
+
+        <h2>{{$thread->name}}</h2>
+
         <ul>
             @foreach($items as $item)
                 <li>
@@ -14,11 +16,14 @@
         </ul>
     @endif
 
-    <form action="keijiban/messages" method="post">
+    <form action="/keijiban/thre" method="post">
         @csrf
         <input type="text" name="msg">
         <input type="submit" value="投稿する">
     </form>
+    <br>
+    <a href="/keijiban">戻る</a>
+    <br>
 @endsection
 
 @section('footer')

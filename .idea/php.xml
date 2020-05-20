@@ -100,12 +100,12 @@
   </component>
   <component name="PhpInterpreters">
     <interpreters>
-      <interpreter id="2c505862-78ca-49e8-9d0b-7a18ef8ec508" name="PHP 7.3" home="/usr/bin/php" debugger_id="php.debugger.XDebug" />
+      <interpreter id="2c505862-78ca-49e8-9d0b-7a18ef8ec508" name="PHP 7.3 (project level)" home="/usr/bin/php" debugger_id="php.debugger.XDebug" />
     </interpreters>
   </component>
   <component name="PhpInterpretersPhpInfoCache">
     <phpInfoCache>
-      <interpreter name="PHP 7.3">
+      <interpreter name="PHP 7.3 (project level)">
         <phpinfo binary_type="PHP" php_cli="/usr/bin/php" path_separator=":" version="7.3.11">
           <additional_php_ini />
           <configuration_file />
