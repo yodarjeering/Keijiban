@@ -22,12 +22,8 @@ class AdminMessageController extends Controller
     public function search(Request $request)
     {
         $items = Message::Thread_idEqual($request->thread_id)
-            ->where('name', 'like', '%' . $request->input . '%')->get();
-//        $items = Message::where([
-//            ['name', 'like', '%' . $request->input . '%'],
-//            ['thread_id', '=', $request->thread_id],
-//        ])->get();
-        $thread = Thread::find($request->thread_id)->first();
+            ->where('content', 'like', '%' . $request->input . '%')->get();
+        $thread = Thread::where('id', $request->thread_id)->first();
         return view('keijiban.admin_thre', [
             'items' => $items,
             'thread' => $thread
