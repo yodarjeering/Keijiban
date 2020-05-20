@@ -25,5 +25,18 @@ class AdminMessageController extends Controller
         return view('keijiban.admin_thre', ['items' => $items]);
     }
 
+    public function delete(Request $request)
+    {
+        $items = Message::find($request->id);
+        return view('keijiban/admin_message_delete', ['items' => $items]);
+    }
 
+    public function remove(Request $request)
+    {
+        $message = Message::find($request->id)->first();
+        $thread = Thread::find($message->thread_id)->first();
+        $thread_id = $thread->id;
+        Message::find($request->id)->delete();
+        return redirect(route('admin_thre',['thread_id'=>$thread_id]));
+    }
 }
