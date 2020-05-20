@@ -20,4 +20,10 @@ Route::get('/keijiban' , 'ThreadController@index');
 Route::post('/keijiban', 'ThreadController@post');
 Route::get('/keijiban/thre','MessageController@index');
 Route::post('/keijiban/thre','MessageController@create');
+Route::get('/keijiban/admin_index', 'AdminThreadController@index');
+Route::post('/keijiban/admin_index','AdminThreadControllerController@serach');
+Route::get('/keijiban/admin_thre_delete', 'AdminThreadController@delete');
+Route::post('keijiban/admin_thre_delete', 'AdminThreadController@remove');
+Route::get('/keijiban/admin_thre', 'AdminMessageController@index');
+
 
