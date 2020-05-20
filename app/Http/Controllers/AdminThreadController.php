@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Thread;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminThreadController extends Controller
 {
     public function index(Request $request)
     {
+        $user = Auth::user();
         $items = Thread::all();
         return view('keijiban.admin_index', ['items' => $items]);
     }
